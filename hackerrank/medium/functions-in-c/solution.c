@@ -1,24 +1,29 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
 
-int main() 
-{
-    int a, b;
-    float c, d;
+/*
+Add `int max_of_four(int a, int b, int c, int d)` here.
+*/
+int max_of_four(int a, int b, int c, int d) {
+    int max = a;
     
-    // 1. Read two integers from the first line
-    scanf("%d %d", &a, &b);
+    if (b > max) {
+        max = b;
+    }
+    if (c > max) {
+        max = c;
+    }
+    if (d > max) {
+        max = d;
+    }
     
-    // 2. Read two floating-point numbers from the second line
-    scanf("%f %f", &c, &d);
-    
-    // 3. Print the sum and difference of the integers on the first line
-    printf("%d %d\n", a + b, a - b);
-    
-    // 4. Print the sum and difference of the floats rounded to 1 decimal place on the second line
-    printf("%.1f %.1f\n", c + d, c - d);
+    return max;
+}
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d\n", ans); // Note: Make sure to use printf("%d\n", ans); in HackerRank if writing main
     
     return 0;
 }
