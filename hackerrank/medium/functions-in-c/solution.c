@@ -3,13 +3,22 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main()
+int main() 
 {
-int n1,n2;
-float m1,m2;
-scanf("%d %d",&n1,&n2);
-printf("%d %d\n",n1+n2, n1-n2);
-    scanf("%f %f", &m1,&m2);
-    printf("%.1f %.1f\n", m1 + m2, m1 -m2);
+    int a, b;
+    float c, d;
+    
+    // 1. Read two integers from the first line
+    scanf("%d %d", &a, &b);
+    
+    // 2. Read two floating-point numbers from the second line
+    scanf("%f %f", &c, &d);
+    
+    // 3. Print the sum and difference of the integers on the first line
+    printf("%d %d\n", a + b, a - b);
+    
+    // 4. Print the sum and difference of the floats rounded to 1 decimal place on the second line
+    printf("%.1f %.1f\n", c + d, c - d);
+    
     return 0;
 }
