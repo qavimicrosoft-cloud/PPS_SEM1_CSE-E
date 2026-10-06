@@ -3,13 +3,28 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main()
+int main() 
 {
-int n1,n2;
-float m1,m2;
-scanf("%d %d",&n1,&n2);
-printf("%d %d\n",n1+n2, n1-n2);
-    scanf("%f %f", &m1,&m2);
-    printf("%.1f %.1f\n", m1 + m2, m1 -m2);
+    char ch;
+    char s[100];
+    char sen[100];
+    
+    // 1. Read the character
+    scanf("%c", &ch);
+    
+    // 2. Read the single-word string
+    scanf("%s", s);
+    
+    // 3. Consume the newline character left in the input buffer
+    scanf("\n");
+    
+    // 4. Read the sentence (including spaces)
+    scanf("%[^\n]", sen);
+    
+    // Print the results on separate lines
+    printf("%c\n", ch);
+    printf("%s\n", s);
+    printf("%s\n", sen);
+    
     return 0;
 }
